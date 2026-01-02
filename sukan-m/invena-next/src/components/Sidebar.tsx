@@ -80,9 +80,9 @@ const Sidebar = () => {
                         <li>
                             <Link href="/careers" className="main">Careers</Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link href="/blog" className="main">Blog</Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </nav>
 
