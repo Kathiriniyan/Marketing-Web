@@ -19,7 +19,7 @@ const Hero = () => {
                                 <p className="disc banner-para text-gray-500">
                                     As the dedicated operational backbone for our partners, we provide end-to-end support across sales, back-office processes, administration, marketing, and IT to ensure daily operations run smoothly across global teams.
                                 </p>
-                                <Link href="/contact" className="rts-btn btn-primary color-h-black inline-block mt-4">Explore Opportunities</Link>
+                                <Link href="/contact" className="rts-btn btn-primary color-h-black inline-block mt-4">Get in touch..!</Link>
                             </div>
                         </div>
                     </div>

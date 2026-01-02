@@ -56,7 +56,7 @@ export default function ServicePageContent() {
         <section
           id="service-detail"
           ref={detailRef}
-          className="rts-service-detail-area rts-section-gapBottom pt-40 pb-20"
+          className="rts-service-detail-area rts-section-gapBottom sm:pt-20 pb-20"
           style={{
             opacity: detailAnimOn ? 1 : 0,
             transform: detailAnimOn ? "translateY(0px)" : "translateY(20px)",
@@ -65,7 +65,19 @@ export default function ServicePageContent() {
         >
           <div className="container">
             <div className="row g-5 align-items-center">
-              <div className="col-lg-6">
+              {/* ✅ IMAGE FIRST ON MOBILE, RIGHT ON DESKTOP */}
+              <div className="col-lg-6 order-1 order-lg-2">
+                <div className="thumbnail">
+                  <img
+                    src={activeService.thumb}
+                    alt={activeService.title}
+                    className="w-100"
+                  />
+                </div>
+              </div>
+
+              {/* ✅ CONTENT SECOND ON MOBILE, LEFT ON DESKTOP */}
+              <div className="col-lg-6 order-2 order-lg-1">
                 <div className="title-style-one">
                   <span className="pre">Service Detail</span>
                   <h2 className="title rts-text-anime-style-1">
@@ -95,23 +107,13 @@ export default function ServicePageContent() {
                   </Link>
                 </div>
               </div>
-
-              <div className="col-lg-6">
-                <div className="thumbnail">
-                  <img
-                    src={activeService.thumb}
-                    alt={activeService.title}
-                    className="w-100"
-                  />
-                </div>
-              </div>
             </div>
           </div>
         </section>
       )}
 
       {/* Service Area (UI unchanged – just Learn More wired to state) */}
-      <section className="our-service-area-start rts-section-gapBottom  xl:pt-20">
+      <section className="our-service-area-start rts-section-gapBottom -pt-20">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -143,8 +145,7 @@ export default function ServicePageContent() {
                               handleLearnMore(s.id);
                             }}
                           >
-                            Learn More{" "}
-                            <i className="fa-solid fa-arrow-right" />
+                            Learn More <i className="fa-solid fa-arrow-right" />
                           </a>
                         </div>
                       </>
@@ -164,8 +165,7 @@ export default function ServicePageContent() {
                               handleLearnMore(s.id);
                             }}
                           >
-                            Learn More{" "}
-                            <i className="fa-solid fa-arrow-right" />
+                            Learn More <i className="fa-solid fa-arrow-right" />
                           </a>
                         </div>
                         <div className="thumbnail">
@@ -227,10 +227,7 @@ export default function ServicePageContent() {
                 data-delay="0.2"
                 data-duration="1.2"
               >
-                <img
-                  src="/assets/images/process/03.webp"
-                  alt="working-process"
-                />
+                <img src="/assets/images/process/03.webp" alt="working-process" />
               </div>
             </div>
           </div>
@@ -256,10 +253,7 @@ export default function ServicePageContent() {
           <div className="row g-5">
             <div className="col-lg-6">
               <div className="thumbnail-faq-left">
-                <img
-                  src="/assets/images/faq/02.webp"
-                  alt="faq-iumage area"
-                />
+                <img src="/assets/images/faq/02.webp" alt="faq-iumage area" />
               </div>
             </div>
 
@@ -286,9 +280,7 @@ export default function ServicePageContent() {
                       </h2>
 
                       <div
-                        className={`accordion-collapse ${
-                          isOpen ? "show" : ""
-                        }`}
+                        className={`accordion-collapse ${isOpen ? "show" : ""}`}
                         style={{
                           maxHeight: isOpen ? "500px" : "0px",
                           overflow: "hidden",
