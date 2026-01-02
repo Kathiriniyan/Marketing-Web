@@ -8,7 +8,7 @@ export default function About() {
           <div className="col-lg-6">
             <div className="left-thumbnail-about-area-two">
               <Image
-                src="/assets/images/about/1.png"
+                src="/assets/images/about/0011.png"
                 alt="about"
                 width={700}
                 height={700}
@@ -18,7 +18,7 @@ export default function About() {
 
               <div className="small-image">
                 <Image
-                  src="/assets/images/about/05.webp"
+                  src="/assets/images/about/005.webp"
                   alt="small"
                   width={350}
                   height={350}
