@@ -32,7 +32,7 @@ export default function Footer() {
               <div className="quick-link-inner">
                 <ul className="links">
                   <li>
-                    <Link href="#">
+                    <Link href="/contact">
                       <i className="far fa-arrow-right"></i> Forum Support
                     </Link>
                   </li>
@@ -51,11 +51,6 @@ export default function Footer() {
                       <i className="far fa-arrow-right"></i> Careers
                     </Link>
                   </li>
-                  <li>
-                    <Link href="#">
-                      <i className="far fa-arrow-right"></i> Cookie Policy
-                    </Link>
-                  </li>
                 </ul>
 
                 <ul className="links margin-left-70">
@@ -69,11 +64,11 @@ export default function Footer() {
                       <i className="far fa-arrow-right"></i> Projects
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href="/blog">
                       <i className="far fa-arrow-right"></i> Blog
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link href="/services">
                       <i className="far fa-arrow-right"></i> Service
