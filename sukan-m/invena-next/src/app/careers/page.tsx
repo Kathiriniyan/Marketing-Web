@@ -7,7 +7,8 @@ import { careers } from "@/lib/careers";
 
 export const metadata: Metadata = {
   title: "Career | Sukan M",
-  description: "Career with Sukan Marketing",
+  description: "Join Sukan Marketing. We are hiring for Sales, Back Office and Planning, Accounts, Marketing, Secretary, and IT roles (Python, Data, Cloud). ",
+  keywords: "Sukan Marketing vacancies, telesales job, back office job, python developer job, data engineer job, cloud engineer job",
 };
 
 export default function CareersPage() {

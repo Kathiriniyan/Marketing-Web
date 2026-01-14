@@ -7,7 +7,8 @@ import BusinessGoal from "@/components/BusinessGoal";
 
 export const metadata: Metadata = {
   title: "About | Sukan M",
-  description: "Learn more about Sukan M",
+  description: "Sukan Marketing supports companies worldwide with operational execution across sales, back office, administration, online marketing, and IT. ",
+  keywords: "about Sukan Marketing, operations support team, worldwide support",
 };
 
 export default function AboutPage() {

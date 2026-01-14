@@ -6,7 +6,8 @@ import ServicePageContent from "./ServicePageContent";
 
 export const metadata: Metadata = {
   title: "Our Services | Sukan M",
-  description: "Service We Provide",
+  description: "Explore our services: telesales, back office, administration, online marketing, and IT support including app and database solutions.",
+  keywords: "telesales, back office, administration, online marketing, app development, database support",
 };
 
 export default function ServicePage() {

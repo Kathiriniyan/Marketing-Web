@@ -6,7 +6,8 @@ import Contact from "@/components/Contact";
 
 export const metadata: Metadata = {
   title: "Contact | Sukan M",
-  description: "Get in touch with Sukan M",
+  description: "Contact Sukan Marketing for worldwide operations support across sales, back office, administration, online marketing, and IT solutions. ",
+  keywords: "contact Sukan Marketing, operations support, telesales support, IT support ",
 };
 
 export default function ContactPage() {
