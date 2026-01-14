@@ -21,8 +21,8 @@ const Header = () => {
                                             Info@sukan-m.com</a>
                                     </div>
                                     <div className="mail">
-                                        <a href="tel:+2108976569"><i className="fa-solid fa-phone-flip"></i>
-                                            Hotline: +94 771212112</a>
+                                        <a href="tel:+94761287897"><i className="fa-solid fa-phone-flip"></i>
+                                            Hotline: +94 761287897</a>
                                     </div>
                                 </div>
                             </div>

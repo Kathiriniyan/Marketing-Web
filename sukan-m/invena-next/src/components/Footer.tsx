@@ -169,10 +169,10 @@ export default function Footer() {
                       Call Us 24/7
                     </h6>
                     <Link
-                      href="tel:+25621452156"
+                      href="tel:+94761287897"
                       className="text-white/70 hover:text-white transition text-[15px]"
                     >
-                      (+256) 2145.2156
+                      +94 761287897
                     </Link>
                   </div>
                 </div>

@@ -28,7 +28,7 @@ const Sidebar = () => {
                             {/* single */}
                             <div className="single">
                                 <i className="fas fa-phone-alt"></i>
-                                <a href="tel:+94771212112">+94 771212112</a>
+                                <a href="tel:+94761287897">+94 761287897</a>
                             </div>
                             {/* single ENd */}
                             {/* single */}
@@ -54,7 +54,7 @@ const Sidebar = () => {
                             <a href="#" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
                             <a href="#" aria-label="twitter"><i className="fab fa-twitter"></i></a>
                             <a href="#" aria-label="instagram"><i className="fab fa-instagram"></i></a>
-                            <a href="#" aria-label="instagram"><i className="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="linkedin"><i className="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </div>
@@ -99,8 +99,8 @@ const Sidebar = () => {
                             </a>
                         </li>
                         <li>
-                            <a href="#" aria-label="youtube">
-                                <i className="fa-brands fa-youtube"></i>
+                            <a href="#" aria-label="instagram">
+                                <i className="fa-brands fa-instagram"></i>
                             </a>
                         </li>
                         <li>

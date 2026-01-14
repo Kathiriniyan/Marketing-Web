@@ -93,8 +93,8 @@ export default function ContactPage() {
                     </div>
                     <div className="information-wrapper">
                       <span>Call Us 24/7</span>
-                      <a href="tel:+94777555666">
-                        <h6 className="title">(+94) 777 555 666</h6>
+                      <a href="tel:+94761287897">
+                        <h6 className="title">+94 761287897</h6>
                       </a>
                     </div>
                   </div>
@@ -105,8 +105,8 @@ export default function ContactPage() {
                     </div>
                     <div className="information-wrapper">
                       <span>Work with us</span>
-                      <a href="mailto:info@sukan.com">
-                        <h6 className="title">info@sukan.com</h6>
+                      <a href="mailto:Info@sukan-m.com">
+                        <h6 className="title">Info@sukan-m.com</h6>
                       </a>
                     </div>
                   </div>

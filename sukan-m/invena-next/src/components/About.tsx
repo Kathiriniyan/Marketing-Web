@@ -78,8 +78,8 @@ export default function About() {
 
                   <div className="information">
                     <span>Call us anytime</span>
-                    <a href="tel:+94776666666">
-                      <h6 className="title">+94 77 666 6666</h6>
+                    <a href="tel:+94761287897">
+                      <h6 className="title">+94 761287897</h6>
                     </a>
                   </div>
                 </div>
