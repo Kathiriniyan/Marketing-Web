@@ -45,7 +45,6 @@ const Header = () => {
                                         <ul className="">
                                             <li className="main-nav">
                                                 <Link href="/">Home</Link>
-                                                {/* Mega menu content omitted for brevity, can be added later */}
                                             </li>
                                             <li className="main-nav">
                                                 <Link href="/about">About us</Link>
@@ -56,9 +55,9 @@ const Header = () => {
                                             <li className="main-nav">
                                                 <Link href="/careers">Careers</Link>
                                             </li>
-                                            {/* <li className="main-nav">
+                                            <li className="main-nav">
                                                 <Link href="/blog">Blog</Link>
-                                            </li> */}
+                                            </li>
                                         </ul>
                                     </div>
 

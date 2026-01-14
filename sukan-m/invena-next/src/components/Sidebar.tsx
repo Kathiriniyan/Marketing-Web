@@ -10,7 +10,6 @@ const Sidebar = () => {
                 <i className="far fa-times"></i>
             </button>
 
-            {/* inner menu area desktop start */}
             <div className="rts-sidebar-menu-desktop">
                 <Link className="logo-1" href="/">
                     <Image className="logo" src="/assets/images/logo/logo-001.svg" alt="finbiz_logo" width={150} height={40} />
@@ -80,9 +79,9 @@ const Sidebar = () => {
                         <li>
                             <Link href="/careers" className="main">Careers</Link>
                         </li>
-                        {/* <li>
+                        <li>
                             <Link href="/blog" className="main">Blog</Link>
-                        </li> */}
+                        </li>
                     </ul>
                 </nav>
 

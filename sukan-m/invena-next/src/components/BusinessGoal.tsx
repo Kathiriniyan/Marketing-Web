@@ -14,10 +14,9 @@ export default function BusinessGoal() {
 
     gsap.registerPlugin(ScrollTrigger);
 
-    // Create GSAP context for clean setup/cleanup
     const ctx = gsap.context(() => {
       gsap.to(smallThumbRef.current, {
-        x: 250, // same as your old main.js .images-r animation
+        x: 250, 
         scrollTrigger: {
           trigger: smallThumbRef.current,
           start: "top bottom",
@@ -28,7 +27,7 @@ export default function BusinessGoal() {
     }, smallThumbRef);
 
     return () => {
-      ctx.revert(); // kill ScrollTrigger + animation on unmount
+      ctx.revert(); 
     };
   }, []);
 
@@ -122,7 +121,6 @@ export default function BusinessGoal() {
                   height={900}
                 />
               </div>
-              {/* 🔽 This is now fully controlled by this component */}
               <div
                 ref={smallThumbRef}
                 className="small-thumbnail"

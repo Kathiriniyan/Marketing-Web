@@ -31,11 +31,9 @@ export default function CareerDetails() {
 
     const job = useMemo(() => careers.find((j) => j.slug === slug), [slug]);
 
-    // If slug isn't ready yet, render nothing (or a skeleton if you want)
     if (!slug) return null;
     if (!job) return notFound();
 
-    // CV upload UI state
     const [cvFile, setCvFile] = useState<File | null>(null);
     const [dragOver, setDragOver] = useState(false);
     const fileInputRef = useRef<HTMLInputElement | null>(null);
@@ -50,7 +48,6 @@ export default function CareerDetails() {
             "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
         ];
 
-        // Some browsers may provide empty type for some files; fall back to extension check.
         const name = file.name.toLowerCase();
         const extOk = name.endsWith(".pdf") || name.endsWith(".doc") || name.endsWith(".docx");
         const typeOk = allowed.includes(file.type);
@@ -78,7 +75,7 @@ export default function CareerDetails() {
             return;
         }
 
-        // Capture the form element before any async operation
+        
         const form = e.currentTarget;
         setIsSubmitting(true);
 
@@ -431,7 +428,6 @@ export default function CareerDetails() {
                                                 )}
                                             </div>
 
-                                            {/* Actual input covers the box */}
                                             <input
                                                 ref={fileInputRef}
                                                 name="cv"

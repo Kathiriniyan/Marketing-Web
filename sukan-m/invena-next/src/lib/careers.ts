@@ -1,5 +1,3 @@
-// src/lib/careers.ts
-
 export type CareerJob = {
   slug: string;
   title: string;
@@ -23,7 +21,7 @@ export const careers: CareerJob[] = [
     type: "Full Time",
     experience: "1 Year Experience",
     deadline: "-",
-    salary: "RS.35000 (Basic) Monthly",
+    salary: "-",
     intro:
       "Support our partners by calling leads, following up, and updating CRM data.",
     responsibilities: [
@@ -47,7 +45,7 @@ export const careers: CareerJob[] = [
     type: "Full Time",
     experience: "1 Year Experience",
     deadline: "-",
-    salary: "RS.35000 (Basic) Monthly",
+    salary: "-",
     intro:
       "Keep operations moving by supporting orders, confirmations, planning updates, and coordination.",
     responsibilities: [
@@ -71,7 +69,7 @@ export const careers: CareerJob[] = [
     type: "Full Time",
     experience: "1 Year Experience",
     deadline: "-",
-    salary: "RS.40000 (Basic) Monthly",
+    salary: "-",
     intro:
       "Support financial administration with documentation checks, reporting, and invoicing assistance.",
     responsibilities: [
@@ -95,7 +93,7 @@ export const careers: CareerJob[] = [
     type: "Full Time",
     experience: "1 Year Experience",
     deadline: "-",
-    salary: "RS.40000 (Basic) Monthly",
+    salary: "-",
     intro:
       "Support online marketing execution: content updates, basic SEO text, and campaign coordination.",
     responsibilities: [
@@ -119,7 +117,7 @@ export const careers: CareerJob[] = [
     type: "Full Time",
     experience: "1 Year Experience",
     deadline: "-",
-    salary: "RS.40000 (Basic) Monthly",
+    salary: "-",
     intro:
       "Support coordination: scheduling, email handling, documentation, and internal follow-ups.",
     responsibilities: [

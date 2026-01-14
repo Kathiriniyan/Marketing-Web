@@ -9,10 +9,8 @@ export default function Services() {
     const initSwiper = () => {
       const w = window as any;
 
-      // wait until Swiper is loaded from your template scripts
       if (!w?.Swiper) return;
 
-      // ✅ destroy previous instance if exists (fix back-navigation issue)
       const el = document.querySelector(".mySwiper-service-1") as any;
       if (el?.swiper) {
         try {
@@ -20,7 +18,6 @@ export default function Services() {
         } catch {}
       }
 
-      // ✅ re-init fresh swiper (always starts from first slide)
       new w.Swiper(".mySwiper-service-1", {
         slidesPerView: 3,
         spaceBetween: 30,
@@ -41,13 +38,11 @@ export default function Services() {
       });
     };
 
-    // small delay so template scripts (swiper.js + main.js) are ready
     const t = window.setTimeout(initSwiper, 250);
 
     return () => {
       window.clearTimeout(t);
 
-      // cleanup
       const el = document.querySelector(".mySwiper-service-1") as any;
       if (el?.swiper) {
         try {
@@ -86,7 +81,6 @@ export default function Services() {
                   <div className="service-style-swiper-wrapper-two">
                     <div className="swiper mySwiper-service-1">
                       <div className="swiper-wrapper">
-                        {/* 1 - Sales (Telesales) */}
                         <div className="swiper-slide">
                           <div className="single-service-signle-wrapper">
                             <div className="icons">
@@ -190,7 +184,7 @@ export default function Services() {
                           </div>
                         </div>
 
-                        {/* 5 - IT Support (App + Database) */}
+                        {/* 5 - IT Support  */}
                         <div className="swiper-slide">
                           <div className="single-service-signle-wrapper">
                             <div className="icons">

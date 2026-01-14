@@ -7,10 +7,9 @@ import { useInView } from "react-intersection-observer";
 export default function CounterUp() {
   const { ref, inView } = useInView({
     threshold: 0.35,
-    triggerOnce: false, // run again when you scroll back
+    triggerOnce: false, 
   });
 
-  // ✅ CONTROL SECTION HEIGHT HERE
   const sectionStyle: React.CSSProperties = {
     paddingTop: 90,
     paddingBottom: 90,
@@ -22,7 +21,6 @@ export default function CounterUp() {
     backgroundRepeat: "no-repeat",
   };
 
-  // ✅ force re-run animation every time it enters viewport
   const runKey = inView ? "run" : "stop";
 
   const counters = [
@@ -63,7 +61,6 @@ export default function CounterUp() {
                     <p className="disc mb-0">{item.label}</p>
                   </div>
                 </div>
-                {/* /tablet-friendly layout */}
               </div>
             </div>
           ))}

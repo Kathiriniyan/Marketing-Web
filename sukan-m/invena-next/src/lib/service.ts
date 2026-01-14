@@ -1,6 +1,4 @@
-// src/lib/service.ts
 
-// Types
 export type ServiceSection = {
   title: string;
   body: string;
@@ -34,7 +32,7 @@ export type FaqItem = {
   open?: boolean;
 };
 
-// === SERVICES (from SEO doc) ===
+
 export const SERVICES: ServiceItem[] = [
   {
     id: "operations-support",
@@ -148,7 +146,6 @@ export const SERVICES: ServiceItem[] = [
   },
 ];
 
-// === STEPS (same content you had) ===
 export const STEPS: StepItem[] = [
   {
     number: "01",
@@ -170,7 +167,6 @@ export const STEPS: StepItem[] = [
   },
 ];
 
-// === FAQ (same content you had) ===
 export const FAQS: FaqItem[] = [
   {
     id: "01",

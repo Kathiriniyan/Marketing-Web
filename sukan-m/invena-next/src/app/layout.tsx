@@ -1,4 +1,3 @@
-// app/layout.tsx
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
@@ -32,7 +31,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Favicon (added, like original HTML) */}
         <link
           rel="shortcut icon"
           type="image/x-icon"
@@ -48,10 +46,8 @@ export default function RootLayout({
         <link rel="stylesheet" href="/assets/css/vendor/bootstrap.min.css" />
         <link rel="stylesheet" href="/assets/css/style.css" />
 
-        {/* Optional: image preload from original template */}
         <link rel="preload" as="image" href="/assets/images/banner/21.webp" />
 
-        {/* Google Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -83,10 +79,8 @@ export default function RootLayout({
           </svg>
         </div>
 
-        {/* ✅ 1) Load jQuery first */}
         <Script src="/assets/js/plugins/jquery.js" strategy="beforeInteractive" />
 
-        {/* ✅ 2) Ensure window.jQuery and window.$ are defined (important for template plugins) */}
         <Script
           id="jquery-global-fix"
           strategy="beforeInteractive"
@@ -113,7 +107,6 @@ export default function RootLayout({
           }}
         />
 
-        {/* ✅ 3) jQuery-dependent scripts: run after interactive so jQuery is guaranteed */}
         <Script
           src="/assets/js/vendor/bootstrap.min.js"
           strategy="afterInteractive"
@@ -157,7 +150,7 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
 
-        {/* ✅ 4) Main template JS LAST */}
+        {/* Main template JS LAST */}
         <Script src="/assets/js/main.js" strategy="afterInteractive" />
       </body>
     </html>

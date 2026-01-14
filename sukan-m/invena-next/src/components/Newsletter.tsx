@@ -5,7 +5,6 @@ const Newsletter = () => {
             <div className="rts-cta-wrapper">
               <div className="background-cta">
                 <div className="row">
-                  {/* cta-left */}
                   <div className="col-lg-6">
                     <div className="cta-left-wrapepr">
                       <p className="cta-disc">Latest Business Ideas</p>
@@ -13,9 +12,7 @@ const Newsletter = () => {
                     </div>
                   </div>
 
-                  {/* cta-right */}
                   <div className="col-lg-6">
-                    {/* Keep HTML-like form. No React handlers in Server Component */}
                     <form className="cta-input-arae" action="#" method="post">
                       <input
                         type="email"

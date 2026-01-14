@@ -1,4 +1,3 @@
-// app/contact/page.tsx
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -79,7 +78,6 @@ export default function ContactPage() {
               <div className="map-information-2-footer">
                 <h5 className="title-main">Contact Us</h5>
 
-                {/* Optional line image (keep if CSS depends on it) */}
                 <img
                   loading="lazy"
                   src="/assets/images/footer/02.svg"

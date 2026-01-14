@@ -35,13 +35,11 @@ export default function LoadingScreen({
       const wait = Math.max(0, minDurationMs - elapsed);
 
       window.setTimeout(() => {
-        setExiting(true); // triggers fade-out
-        window.setTimeout(() => setVisible(false), 450); // match CSS transition
+        setExiting(true); 
+        window.setTimeout(() => setVisible(false), 450); 
       }, wait);
     };
 
-    // we consider “first render mounted” as ready
-    // if you want to wait for images too: use window.addEventListener("load", done)
     done();
   }, [oncePerSession, minDurationMs]);
 

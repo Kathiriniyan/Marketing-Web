@@ -5,7 +5,7 @@ export async function POST(req: NextRequest) {
     try {
         const { name, phone, email, message } = await req.json();
 
-        // Validate required fields
+
         if (!name || !email || !message) {
             return NextResponse.json(
                 { error: 'Name, email, and message are required fields.' },
@@ -13,7 +13,6 @@ export async function POST(req: NextRequest) {
             );
         }
 
-        // Check for environment variables
         if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
             console.error("Missing EMAIL_USER or EMAIL_PASS environment variables");
             return NextResponse.json(
@@ -34,7 +33,7 @@ export async function POST(req: NextRequest) {
 
         const mailOptions = {
             from: process.env.EMAIL_USER,
-            to: process.env.EMAIL_USER, // Sending to self as per request
+            to: process.env.EMAIL_USER, 
             subject: `New Contact Enquiry from ${name}`,
             text: `
           New Contact Enquiry Received!

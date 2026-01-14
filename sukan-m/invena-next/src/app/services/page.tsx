@@ -1,4 +1,3 @@
-// src/app/service/page.tsx
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -15,7 +14,7 @@ export default function ServicePage() {
     <main>
       <Header />
 
-      {/* Breadcrumb / Hero (unchanged) */}
+      {/* Breadcrumb / Hero*/}
       <section className="rts-breadcrumb-area small-h pt-40 sm:pt-80">
         <div className="container">
           <div className="row">

@@ -1,4 +1,4 @@
-// src/app/service/ServicePageContent.tsx
+
 "use client";
 
 import { useEffect, useRef, useState } from "react";
@@ -9,10 +9,8 @@ export default function ServicePageContent() {
   const [activeServiceId, setActiveServiceId] = useState<string | null>(null);
   const detailRef = useRef<HTMLElement | null>(null);
 
-  // For smooth fade/slide of the detail section
   const [detailAnimOn, setDetailAnimOn] = useState(false);
 
-  // FAQ open/close state (one at a time)
   const [openFaqId, setOpenFaqId] = useState<string | null>(
     FAQS.find((f) => f.open)?.id ?? null
   );
@@ -22,10 +20,8 @@ export default function ServicePageContent() {
   function handleLearnMore(id: string) {
     setActiveServiceId(id);
 
-    // trigger animation
     setDetailAnimOn(false);
 
-    // wait for section to mount then animate + scroll
     setTimeout(() => {
       setDetailAnimOn(true);
 
@@ -38,7 +34,6 @@ export default function ServicePageContent() {
     }, 0);
   }
 
-  // Reset animation when active service changes
   useEffect(() => {
     if (!activeService) {
       setDetailAnimOn(false);
@@ -51,7 +46,7 @@ export default function ServicePageContent() {
 
   return (
     <>
-      {/* 🔽 Detail area – hidden until a service is selected, with smooth fade/slide */}
+      {/* Detail area */}
       {activeService && (
         <section
           id="service-detail"
@@ -65,7 +60,7 @@ export default function ServicePageContent() {
         >
           <div className="container">
             <div className="row g-5 align-items-center">
-              {/* ✅ IMAGE FIRST ON MOBILE, RIGHT ON DESKTOP */}
+              
               <div className="col-lg-6 order-1 order-lg-2">
                 <div className="thumbnail">
                   <img
@@ -76,7 +71,7 @@ export default function ServicePageContent() {
                 </div>
               </div>
 
-              {/* ✅ CONTENT SECOND ON MOBILE, LEFT ON DESKTOP */}
+              
               <div className="col-lg-6 order-2 order-lg-1">
                 <div className="title-style-one">
                   <span className="pre">Service Detail</span>
@@ -112,7 +107,7 @@ export default function ServicePageContent() {
         </section>
       )}
 
-      {/* Service Area (UI unchanged – just Learn More wired to state) */}
+      {/* Service Area */}
       <section className="our-service-area-start rts-section-gapBottom -pt-20">
         <div className="container">
           <div className="row">
@@ -136,7 +131,6 @@ export default function ServicePageContent() {
                           </div>
                           <h5 className="title">{s.title}</h5>
                           <p className="disc">{s.desc}</p>
-                          {/* same look, but uses onClick instead of navigation */}
                           <a
                             href="#service-detail"
                             className="arrow-right-btn"
@@ -181,7 +175,7 @@ export default function ServicePageContent() {
         </div>
       </section>
 
-      {/* Working Process (unchanged) */}
+      {/* Working Process */}
       <section className="working-process-one bg-main rts-section-gap without-clip-radious">
         <div className="container">
           <div className="row g-5 align-items-center">
@@ -234,7 +228,7 @@ export default function ServicePageContent() {
         </div>
       </section>
 
-      {/* FAQ Area – fixed React accordion with smooth transition */}
+      {/* FAQ Area */}
       <section className="rts-faq-area rts-section-gap">
         <div className="container">
           <div className="row">

@@ -11,9 +11,7 @@ export default function Footer() {
       id="contact"
     >
       <div className="container bg-shape-f1">
-        {/* footer call to action area */}
         <Newsletter />
-        {/* footer call to action area End */}
 
         {/* rts footer area */}
         <div className="row pt--120 pt_sm--80 pb--80 pb_sm--40">
@@ -64,11 +62,11 @@ export default function Footer() {
                       <i className="far fa-arrow-right"></i> Projects
                     </Link>
                   </li>
-                  {/* <li>
+                  <li>
                     <Link href="/blog">
                       <i className="far fa-arrow-right"></i> Blog
                     </Link>
-                  </li> */}
+                  </li>
                   <li>
                     <Link href="/services">
                       <i className="far fa-arrow-right"></i> Service

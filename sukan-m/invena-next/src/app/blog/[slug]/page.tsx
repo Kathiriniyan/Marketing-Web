@@ -1,11 +1,9 @@
-// src/app/blog/[slug]/page.tsx
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
 import { getAllCategories, getAllPosts, getAllTags, getPostBySlug } from "@/lib/blog";
 
-// ✅ prebuild params
 export function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));
 }
@@ -15,7 +13,6 @@ export default async function BlogDetailPage({
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  // ✅ FIX: unwrap params promise
   const { slug: raw } = await params;
 
   const slug = normalizeSlug(raw);
@@ -30,7 +27,6 @@ export default async function BlogDetailPage({
           <h1 style={{ marginTop: 20 }}>Post not found</h1>
           <p style={{ marginTop: 10 }}>The blog post you requested does not exist.</p>
 
-          {/* Debug (remove later) */}
           <p style={{ marginTop: 12, opacity: 0.7 }}>
             Requested slug: <b>{slug}</b>
           </p>
@@ -53,7 +49,6 @@ export default async function BlogDetailPage({
     <main>
       <Header />
 
-      {/* Breadcrumb */}
       <div className="rts-breadcrumb-area pt-40">
         <div className="container">
           <div className="row">
@@ -77,13 +72,10 @@ export default async function BlogDetailPage({
         </div>
       </div>
 
-      {/* Detail area */}
       <div className="rts-blog-list-area -mt-20 rts-section-gapBottom">
         <div className="container">
           <div className="row g-5">
-            {/* LEFT */}
             <div className="col-xl-8 col-md-12 col-sm-12 col-12">
-              {/* Feature image */}
               <div className="overflow-hidden rounded-2xl">
                 <Image
                   src={post.image}
@@ -95,7 +87,6 @@ export default async function BlogDetailPage({
                 />
               </div>
 
-              {/* excerpt */}
               <div className="mt-6">
                 <p className="text-base md:text-lg opacity-90">{post.excerpt}</p>
               </div>
@@ -113,7 +104,6 @@ export default async function BlogDetailPage({
                 ))}
               </div>
 
-              {/* ✅ Content */}
               <article className="prose prose-base md:prose-lg max-w-none mt-8">
                 {post.content?.map((para, i) => (
                   <p key={i}>{para}</p>
@@ -253,8 +243,6 @@ export default async function BlogDetailPage({
                 </div>
               </div>
             </div>
-
-            {/* end sidebar */}
           </div>
         </div>
       </div>

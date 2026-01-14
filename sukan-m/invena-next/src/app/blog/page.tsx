@@ -1,4 +1,3 @@
-// app/blog/page.tsx
 "use client";
 
 import type { Metadata } from "next";
@@ -23,7 +22,6 @@ export default function BlogPage() {
   const [activeTag, setActiveTag] = useState<string>("All");
   const [page, setPage] = useState(1);
 
-  // mobile / tablet accordion states
   const [showMobileCategories, setShowMobileCategories] = useState(false);
   const [showMobileTags, setShowMobileTags] = useState(false);
 
@@ -89,7 +87,6 @@ export default function BlogPage() {
     <main>
       <Header />
 
-      {/* ✅ Breadcrumb (same class names) */}
       <div className="rts-breadcrumb-area pt-20">
         <div className="container">
           <div className="row">
@@ -102,7 +99,6 @@ export default function BlogPage() {
                   structure, marketing execution, and IT systems for growing companies.
                 </p>
 
-                {/* small active filter line (doesn't break UI) */}
                 <div className="mt-3 text-sm opacity-80">
                   {activeCategory !== "All" && (
                     <>
@@ -165,13 +161,10 @@ export default function BlogPage() {
         </div>
       </div>
 
-      {/* ✅ Blog list section (same class names) */}
       <div className="rts-blog-list-area -mt-40 rts-section-gapBottom">
         <div className="container">
           <div className="row g-5">
-            {/* TOP FILTERS + SEARCH for < xl (mobile + tablet) */}
             <div className="col-12 block xl:hidden mb-4">
-              {/* Search (mobile / tablet) */}
               <div className="rts-single-wized search1 mb-3">
                 <div className="wized-header">
                   <h5 className="title">Search Here</h5>
@@ -192,7 +185,6 @@ export default function BlogPage() {
                 </div>
               </div>
 
-              {/* Mobile / tablet Categories */}
               <div className="rts-single-wized Categories mb-3">
                 <div
                   className="wized-header flex items-center justify-between cursor-pointer"
@@ -235,7 +227,6 @@ export default function BlogPage() {
                 )}
               </div>
 
-              {/* Mobile / tablet Tags */}
               <div className="rts-single-wized tags">
                 <div
                   className="wized-header flex items-center justify-between cursor-pointer"
@@ -273,7 +264,6 @@ export default function BlogPage() {
               </div>
             </div>
 
-            {/* left posts */}
             <div className="col-xl-8 col-md-12 col-sm-12 col-12">
               <div className="row g-5">
                 {visible.map((post, idx) => (
@@ -319,7 +309,6 @@ export default function BlogPage() {
                 )}
               </div>
 
-              {/* pagination (with left + right arrows and only if > 1 page) */}
               {totalPages > 1 && (
                 <div className="row mt-4">
                   <div className="col-12">
@@ -337,7 +326,6 @@ export default function BlogPage() {
 
                         {Array.from({ length: totalPages }).map((_, i) => {
                           const p = i + 1;
-                          // keep UI similar: show max 4 buttons like template
                           if (p > 4) return null;
                           return (
                             <button
@@ -371,9 +359,7 @@ export default function BlogPage() {
               )}
             </div>
 
-            {/* right sidebar – only on desktop / large screens (>= xl) */}
             <div className="col-xl-4 col-md-12 col-sm-12 col-12 mt_lg--60 blog-list-style hidden xl:block">
-              {/* Search (desktop) */}
               <div className="rts-single-wized search1">
                 <div className="wized-header">
                   <h5 className="title">Search Here</h5>
@@ -422,7 +408,6 @@ export default function BlogPage() {
                 </div>
               </div>
 
-              {/* Recent Posts (dynamic, keep same UI) */}
               <div className="rts-single-wized Recent-post">
                 <div className="wized-header">
                   <h5 className="title">Recent Posts</h5>
@@ -481,7 +466,6 @@ export default function BlogPage() {
                 </div>
               </div>
 
-              {/* CTA (keep UI) */}
               <div className="rts-single-wized contact">
                 <div className="wized-header">
                   <Link href="/">
